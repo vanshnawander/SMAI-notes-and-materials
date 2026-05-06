@@ -1,28 +1,27 @@
-1. https://simedw.com/2026/01/31/ear-pronunication-via-ctc/ 
-2. https://huggingface.co/UsefulSensors/moonshine-tiny-ar 
-3. https://www.kimi.com/chat/19d9679f-2632-8f45-8000-095a8a3ae979 (Wake word detection)
+# Notes
 
-200ms buffer -> 5 classifications within 1 second -> 5*60 = 300 classifications per minute -> 300*60 = 18000 classifications per hour . 
+## References
+1. [Ear pronunciation via CTC](https://simedw.com/2026/01/31/ear-pronunication-via-ctc/)
+2. [Moonshine tiny AR model](https://huggingface.co/UsefulSensors/moonshine-tiny-ar)
+3. [Kimi chat (wake-word detection)](https://www.kimi.com/chat/19d9679f-2632-8f45-8000-095a8a3ae979)
 
-Probable Wake words:
-Telugu Emergency Phrases
-హెల్ప్ చేయండి!
-→ Help cheyandi! (mix of English + Telugu)
-డాక్టర్‌ను కాల్ చేయండి త్వరగా!
-→ Call doctor fast!
-అంబులెన్స్ పిలవండి రా!
-→ Call ambulance yaar!/hey!
-పోలీస్ కి కాల్ చెయ్యి!
-→ Call police!
-నాకు చాలా నొప్పిగా ఉంది
-→ I’m in a lot of pain
-నాకు బాగోలేదు, హాస్పిటల్ తీసుకెళ్లండి
-→ Not feeling well, take me to hospital
-అయ్యో! యాక్సిడెంట్ అయింది!
-→ Oh no! Accident happened!
-త్వరగా రండి ప్లీజ్!
-→ Come fast please!
-ఎవరైనా హెల్ప్ చేయండి!
-→ Someone help!
-శ్వాస తీసుకోవడం కష్టం అవుతోంది
-→ I’m having trouble breathing
+## Inference Throughput Estimate
+- Buffer size: **200 ms**
+- Classifications per second: **5**
+- Classifications per minute: **5 × 60 = 300**
+- Classifications per hour: **300 × 60 = 18,000**
+
+## Probable Wake Words (Telugu Emergency Phrases)
+
+| Telugu Phrase | Transliteration | Meaning / Intent |
+|---|---|---|
+| హెల్ప్ చేయండి! | Help cheyandi! | Please help! |
+| డాక్టర్‌ను కాల్ చేయండి త్వరగా! | Doctor-nu call cheyandi tvaraga! | Call a doctor quickly! |
+| అంబులెన్స్ పిలవండి రా! | Ambulance pilavandi ra! | Call an ambulance quickly! |
+| పోలీస్ కి కాల్ చెయ్యి! | Police ki call cheyyi! | Call the police! |
+| నాకు చాలా నొప్పిగా ఉంది | Naaku chaala noppiga undi | I am in severe pain. |
+| నాకు బాగోలేదు, హాస్పిటల్ తీసుకెళ్లండి | Naaku baagoledhu, hospital teesukellandi | I am not well; take me to the hospital. |
+| అయ్యో! యాక్సిడెంట్ అయింది! | Ayyo! Accident ayindi! | Oh no! There was an accident! |
+| త్వరగా రండి ప్లీజ్! | Tvaraga randi, please! | Please come quickly! |
+| ఎవరైనా హెల్ప్ చేయండి! | Evaraina help cheyandi! | Someone please help! |
+| శ్వాస తీసుకోవడం కష్టం అవుతోంది | Shwaasa teesukovadam kashtam avuthondi | I am having trouble breathing. |
